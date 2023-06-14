@@ -3,7 +3,7 @@ entries:
   backstage:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-16T08:53:52.234656504+02:00"
+    created: "2023-06-14T10:59:08.895869533+02:00"
     dependencies:
     - name: keycloak
       repository: https://charts.bitnami.com/bitnami
@@ -16,31 +16,65 @@ entries:
     name: backstage
     type: application
     urls:
-    - backstage-0.1.0.tgz
+    - https://jelkosz.github.io/cluster-templates-manifests/backstage-0.1.0.tgz
     version: 0.1.0
+  hypershift-agent-template:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2023-06-14T10:59:08.895999746+02:00"
+    description: Hypershift cluster template with agent workers
+    digest: 1aefd252447d010ec9c96b868c238709efd61868c329e6665cb482f9319f478d
+    name: hypershift-agent-template
+    type: application
+    urls:
+    - https://jelkosz.github.io/cluster-templates-manifests/hypershift-agent-template-0.0.1.tgz
+    version: 0.0.1
   hypershift-kubevirt-template:
   - annotations:
       cluster-template: "true"
     apiVersion: v2
-    created: "2023-05-16T08:53:52.235238695+02:00"
+    created: "2023-06-14T10:59:08.896292728+02:00"
+    description: A Helm chart which installs Hypershift cluster using KubeVirt platform
+    digest: 493852f75874eea3a5d27b246619226ad75a618be1f38f68108719a4b7934515
+    name: hypershift-kubevirt-template
+    type: application
+    urls:
+    - https://jelkosz.github.io/cluster-templates-manifests/hypershift-kubevirt-template-0.0.3.tgz
+    version: 0.0.3
+  - annotations:
+      cluster-template: "true"
+    apiVersion: v2
+    created: "2023-06-14T10:59:08.896152902+02:00"
     description: A Helm chart which installs Hypershift cluster using KubeVirt platform
     digest: f9dba9ee49c541c0610561b53dedb4330eec2b9f1f8b286df61fd1d004725321
     name: hypershift-kubevirt-template
     type: application
     urls:
-    - hypershift-kubevirt-template-0.0.1.tgz
+    - https://jelkosz.github.io/cluster-templates-manifests/hypershift-kubevirt-template-0.0.1.tgz
     version: 0.0.1
   hypershift-template:
   - annotations:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-05-16T08:53:52.235568627+02:00"
+    created: "2023-06-14T10:59:08.896545928+02:00"
+    description: A Helm chart for Kubernetes
+    digest: f2bbeb8f2d4f7d92fed382986de6f2aafe491bf194295cb36568012cf7ad64f2
+    name: hypershift-template
+    type: application
+    urls:
+    - https://jelkosz.github.io/cluster-templates-manifests/hypershift-template-0.0.2.tgz
+    version: 0.0.2
+  - annotations:
+      cluster-template: "true"
+    apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-06-14T10:59:08.896421397+02:00"
     description: A Helm chart for Kubernetes
     digest: 5ec6d9847042c66663daad6e2f26d8abcf4d81e44260caf48571d1608c50b193
     name: hypershift-template
     type: application
     urls:
-    - hypershift-template-0.0.1.tgz
+    - https://jelkosz.github.io/cluster-templates-manifests/hypershift-template-0.0.1.tgz
     version: 0.0.1
-generated: "2023-05-16T08:53:52.218383995+02:00"
+generated: "2023-06-14T10:59:08.88464219+02:00"
