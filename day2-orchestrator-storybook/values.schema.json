@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "type": "object",
+  "required": [
+    "patchId"
+  ],
+  "properties": {
+    "patchId": {
+      "type": "string"
+    }
+  }
+}

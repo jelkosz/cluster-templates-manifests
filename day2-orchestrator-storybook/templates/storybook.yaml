@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: {{ .Release.Namespace }}-{{ .Release.Name }}
+  labels:
+    app: storybook-one
+spec:
+  securityContext:
+    runAsNonRoot: false
+  imagePullPolicy: Always
+  containers:
+    - name: storybook
+      image: 'quay.io/tjelinek/orchestrator-backstage-storybook:latest'
+      command: ["/bin/sh","-c"]
+      args: ["cd backstage-plugins && git fetch origin pull/{{ .Values.patchId }}/head:from-pr && git checkout from-pr && yarn start:storybook"]
+      ports:
+        - containerPort: 6006
+      securityContext:
+        allowPrivilegeEscalation: true
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: {{ .Release.Namespace }}-{{ .Release.Name }}
+spec:
+  ports:
+    - protocol: TCP
+      port: 6006
+      targetPort: 6006
+  type: ClusterIP
+  sessionAffinity: None
+  selector:
+    app: storybook-one
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: {{ .Release.Namespace }}-{{ .Release.Name }}
+spec:
+  to:
+    kind: Service
+    name: storybook-svc
+    weight: 100
+  port:
+    targetPort: 6006
+  wildcardPolicy: None
