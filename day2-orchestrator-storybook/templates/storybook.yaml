@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: {{ .Release.Namespace }}-{{ .Release.Name }}
+  name: storybook
   labels:
     app: storybook-one
 spec:
@@ -21,7 +21,7 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
-  name: {{ .Release.Namespace }}-{{ .Release.Name }}
+  name: storybook
 spec:
   ports:
     - protocol: TCP
@@ -35,7 +35,7 @@ spec:
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: {{ .Release.Namespace }}-{{ .Release.Name }}
+  name: storybook
 spec:
   to:
     kind: Service
