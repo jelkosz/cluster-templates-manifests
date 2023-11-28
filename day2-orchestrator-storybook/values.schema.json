@@ -6,7 +6,7 @@
   ],
   "properties": {
     "patchId": {
-      "type": "string"
+      "type": "integer"
     }
   }
 }
