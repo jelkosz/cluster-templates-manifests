@@ -17,6 +17,12 @@ spec:
         - containerPort: 6006
       securityContext:
         allowPrivilegeEscalation: true
+      readinessProbe:
+        httpGet:
+          path: /
+          port: 6006
+        initialDelaySeconds: 10
+        periodSeconds: 10
 ---
 kind: Service
 apiVersion: v1
