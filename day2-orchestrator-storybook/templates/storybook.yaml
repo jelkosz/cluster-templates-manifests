@@ -12,7 +12,11 @@ spec:
     - name: storybook
       image: 'quay.io/tjelinek/orchestrator-backstage-storybook:latest'
       command: ["/bin/sh","-c"]
+      {{- if eq -1 $.Values.patchId }}
+      args: ["cd backstage-plugins && git fetch --all && git checkout KOGITO-9778-setup && yarn start:storybook"]
+      {{- else }}
       args: ["cd backstage-plugins && git fetch origin pull/{{ .Values.patchId }}/head:from-pr && git checkout from-pr && yarn start:storybook"]
+      {{- end }}
       ports:
         - containerPort: 6006
       securityContext:
