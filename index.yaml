@@ -3,7 +3,7 @@ entries:
   backstage:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-11-30T10:31:38.180533065+01:00"
+    created: "2024-02-21T12:47:06.868638347+01:00"
     dependencies:
     - name: keycloak
       repository: https://charts.bitnami.com/bitnami
@@ -18,10 +18,23 @@ entries:
     urls:
     - https://jelkosz.github.io/cluster-templates-manifests/backstage-0.1.0.tgz
     version: 0.1.0
+  clusterpool-template:
+  - annotations:
+      cluster-template: "true"
+    apiVersion: v2
+    appVersion: 1.16.0
+    created: "2024-02-21T12:47:06.868730934+01:00"
+    description: A Helm chart for cluster pools
+    digest: 9c994c1df9f4d08bc4f0cdc66ca2de0eedebfeb7dd0e67cbc86802339ca4ced3
+    name: clusterpool-template
+    type: application
+    urls:
+    - https://jelkosz.github.io/cluster-templates-manifests/clusterpool-template-0.0.1.tgz
+    version: 0.0.1
   day2-orchestrator-storybook:
   - apiVersion: v2
     appVersion: 0.0.6
-    created: "2023-11-30T10:31:38.180989209+01:00"
+    created: "2024-02-21T12:47:06.869228276+01:00"
     description: Deploys orchestrator storybook from a patch
     digest: 6d71e1cf8cbb5007c1783fc84ef073bba855da540c756c862ec17dc9cc3c9109
     name: day2-orchestrator-storybook
@@ -31,7 +44,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2023-11-30T10:31:38.180909126+01:00"
+    created: "2024-02-21T12:47:06.869148845+01:00"
     description: Deploys orchestrator storybook from a patch
     digest: d87318ae81f6e33d3ea003de53804efbaf9cc589a0008b4fd86221a7349d1873
     name: day2-orchestrator-storybook
@@ -41,7 +54,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 0.0.5
-    created: "2023-11-30T10:31:38.180836362+01:00"
+    created: "2024-02-21T12:47:06.869077127+01:00"
     description: Deploys orchestrator storybook from a patch
     digest: 2cd699535e429a1487d6ae93f15d729a2e6c7750be2973c64787d60d97496a1a
     name: day2-orchestrator-storybook
@@ -51,7 +64,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 0.0.3
-    created: "2023-11-30T10:31:38.180762475+01:00"
+    created: "2024-02-21T12:47:06.868993026+01:00"
     description: Deploys orchestrator storybook from a patch
     digest: 6fb75036d863238dabce62fd74817d52d2f8f8648283d1fbdc1c6340a52c479d
     name: day2-orchestrator-storybook
@@ -61,7 +74,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 0.0.2
-    created: "2023-11-30T10:31:38.180692884+01:00"
+    created: "2024-02-21T12:47:06.868906998+01:00"
     description: Deploys orchestrator storybook from a patch
     digest: 2f8d9a1042201994d8de80837aa7141126fa4676ce1be6cb9fcb00769b4788ea
     name: day2-orchestrator-storybook
@@ -71,7 +84,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-11-30T10:31:38.180621027+01:00"
+    created: "2024-02-21T12:47:06.868827034+01:00"
     description: Deploys orchestrator storybook from a patch
     digest: 1b9adb68a95b9e9d1c533f44ea4e30866bc9d3b33e6d70ed891e53ecfcedcea2
     name: day2-orchestrator-storybook
@@ -82,7 +95,7 @@ entries:
   hypershift-agent-template:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2023-11-30T10:31:38.181070659+01:00"
+    created: "2024-02-21T12:47:06.869313227+01:00"
     description: Hypershift cluster template with agent workers
     digest: 29c0bd98f4b5500216fdb50ea2dd2d2ec13cf0cec5f461781352ab1c04163c98
     name: hypershift-agent-template
@@ -94,7 +107,7 @@ entries:
   - annotations:
       cluster-template: "true"
     apiVersion: v2
-    created: "2023-11-30T10:31:38.181316801+01:00"
+    created: "2024-02-21T12:47:06.869530497+01:00"
     description: A Helm chart which installs Hypershift cluster using KubeVirt platform
     digest: e0526d5da97d370b66df01df61c3217576df480cbff43508eef40f9fdb96122d
     name: hypershift-kubevirt-template
@@ -105,7 +118,7 @@ entries:
   - annotations:
       cluster-template: "true"
     apiVersion: v2
-    created: "2023-11-30T10:31:38.181175475+01:00"
+    created: "2024-02-21T12:47:06.869429371+01:00"
     description: A Helm chart which installs Hypershift cluster using KubeVirt platform
     digest: f9dba9ee49c541c0610561b53dedb4330eec2b9f1f8b286df61fd1d004725321
     name: hypershift-kubevirt-template
@@ -118,7 +131,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-30T10:31:38.181528754+01:00"
+    created: "2024-02-21T12:47:06.869726877+01:00"
     description: A Helm chart for Kubernetes
     digest: 02caf934c4f39f367b9907966a21857822b6a80d221bd135f6dde70494a766d6
     name: hypershift-template
@@ -130,7 +143,7 @@ entries:
       cluster-template: "true"
     apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-30T10:31:38.181423644+01:00"
+    created: "2024-02-21T12:47:06.869626118+01:00"
     description: A Helm chart for Kubernetes
     digest: 5ec6d9847042c66663daad6e2f26d8abcf4d81e44260caf48571d1608c50b193
     name: hypershift-template
@@ -138,4 +151,4 @@ entries:
     urls:
     - https://jelkosz.github.io/cluster-templates-manifests/hypershift-template-0.0.1.tgz
     version: 0.0.1
-generated: "2023-11-30T10:31:38.171162956+01:00"
+generated: "2024-02-21T12:47:06.859417221+01:00"

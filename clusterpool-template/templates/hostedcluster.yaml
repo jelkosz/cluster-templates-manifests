@@ -1,0 +1,8 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterClaim
+metadata:
+  name: claim-{{ .Release.Name }}
+  namespace: clusters
+spec:
+  clusterPoolName: openshift-latest-ga-x86
+  lifetime: 2h
