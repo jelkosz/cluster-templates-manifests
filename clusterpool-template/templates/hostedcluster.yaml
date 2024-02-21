@@ -4,5 +4,5 @@ metadata:
   name: claim-{{ .Release.Name }}
   namespace: clusters
 spec:
-  clusterPoolName: openshift-latest-ga-x86
+  clusterPoolName: my-cluster-pool
   lifetime: 2h
